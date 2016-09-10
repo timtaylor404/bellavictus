@@ -60,6 +60,7 @@ function fController($http) {
                                 var name = res.data.response.venues[0].name;
                                 fCtrl.restaurants.name = res.data.response.venues.name;
                                 console.log("the name is  " + name);
+                                fCtrl.restaurants = res.data.response.venues
                         })
         }
 
