@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="IOM">
+<head>
+    <title> MemeCity </title>
+    <script src="angular.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <section id="dank" ng-controller="dankTroller as dCtrl">
+        <!--{{ dCtrl.greeting }}-->
+
+        <ul>
+            <!--ITEM in LIST-->
+            <!--LIST[i] in LIST-->
+            <li ng-repeat="meme in dCtrl.memes | orderBy:'price':true">
+                <h4>{{ meme.name | uppercase }}</h4>
+                <img style="width:100px;" ng-src="{{meme.picture}}">
+                <span> {{meme.price | currency:'$'}} - {{meme.about}} </span>
+            </li>
+        </ul>
+
+    </section>
+    <hr>
+    <section id="keyboardCat" ng-controller="keyboardCatroller as kCtrl">
+        <!--{{ kCtrl.greeting }}-->
+        <input placeholder="Search Names" ng-model="kCtrl.memeFilter.name">
+        <input placeholder="Search Abouts" ng-model="kCtrl.memeFilter.about">
+        <ul>
+            <!--ITEM in LIST-->
+            <!--LIST[i] in LIST-->
+            <li ng-repeat="meme in kCtrl.memes | filter:kCtrl.memeFilter">
+                <h4>{{ meme.name }}</h4>
+                <img style="width:100px;" ng-src="{{meme.picture}}">
+                <span> {{meme.price}} - {{meme.about}} </span>
+            </li>
+        </ul>
+    </section>
+
+</body>
+</html>

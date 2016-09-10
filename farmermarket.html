@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='FarmersMarket' lang="en">
+
+<head>
+    <title>Farmers Market</title>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="farmers.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default">
+
+            <div class="navbar-header">
+                <a href="main.html" class="navbar-brand"><img src="img/main_title.png"></a>
+            </div>
+        </nav>
+    </nav>
+    <div ng-controller=" FarmersController as fCtrl" class="container">
+        <div class="container">
+            <h1>City zip</h1>
+            <form ng-submit="fCtrl.getGroups()">
+                <input type="[0]" placehlder="zip" ng-model="fCtrl.zip">
+                <button type="submit">Find</button>
+
+                <div class="result" ng-repeat="detail in fCtrl.marketInfo">
+                    <h1 class="well">{{detail.marketname}}</h1>
+                    <h4>ADDRESS {{detail.Address}}</h4>
+                    <h2>SCHEDULE {{detail.Schedule}}</h2>
+                    </div>
+
+            </form>
+        </div>
+        <div>
+
+        </div>
+
+</body>
+
+</html>

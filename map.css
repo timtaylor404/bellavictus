@@ -1,0 +1,42 @@
+/*var myLines = [{
+    "type": "LineString",
+    "coordinates": [[-100, 40], [-105, 45], [-110, 55]]
+}, {
+    "type": "LineString",
+    "coordinates": [[-105, 40], [-110, 45], [-115, 55]]
+}];
+
+var myStyle = {
+    "color": "#ff7800",
+    "weight": 5,
+    "opacity": 0.65
+};
+
+L.geoJson(myLines, {
+    style: myStyle
+}).addTo(map);*/
+
+/*#map{
+  height: 2000px;
+  width: 3000px;
+}*/
+.navbar {
+    /* banner-desktop: */
+    background: #64DCCA;
+    margin-left: 0px;
+    margin-right: auto;
+    width: 100%;
+    height: 135px;
+}
+
+body {
+    background: #FAEDFF;
+    
+    
+}
+
+.container-fluid {
+    margin-top: 200px;
+   
+   
+}
